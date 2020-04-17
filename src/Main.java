@@ -12,27 +12,29 @@ public class Main {
 	public static int[] dmxChannels;
 	
 	/**
-	 * Values for each fader connected
+	 * List of all faders connected
 	 */
-	public static int[] faders;
+	public static Fader[] faders;
 	
 	private static DMXWriter dmxWriter;
 	private static FixtureManager fixtureManager;
+	private static FaderManager faderManager;
 	
 	public static void main(String[] args) {
 		dmxChannels = new int[Constants.DMX_CHANNEL_COUNT]; //Auto initialised to 0
-		faders = new int[Constants.FADER_COUNT]; //Auto initialised to 0
+		faders = new Fader[Constants.FADER_COUNT];
+		setFaders();
 		fixtures = new Fixture[Constants.FIXTURE_COUNT];
-		
-		//TODO: Remove this debug code.
-		fixtures[0] = new Fixture(new FixtureTemplate("Test", 5, new String[] {"lol", "lel", "brightness", "amk", "anan"}, 2), 0, new int[5]);
+		setFixtures();
 		
 		dmxWriter = new DMXWriter();
 		getDmxWriter().start();
 		
-
 		fixtureManager = new FixtureManager();
 		fixtureManager.start();
+		
+		faderManager = new FaderManager();
+		faderManager.start();
 		
 		while(!Thread.interrupted()) {
 			long start = System.nanoTime();
@@ -43,6 +45,16 @@ public class Main {
 			if(time > Constants.MAIN_LOOP_PERIOD_NANOS)
 				onError(ErrorType.MAIN_LOOP_NOT_UPDATED_FAST_ENOUGH, time + "ns > " + Constants.MAIN_LOOP_PERIOD_NANOS + "ns");
 		}
+	}
+
+	private static void setFixtures() {
+		// TODO Auto-generated method stub
+		throw new IllegalStateException("Unwritten method stub!");
+	}
+
+	private static void setFaders() {
+		// TODO Auto-generated method stub
+		throw new IllegalStateException("Unwritten method stub!");
 	}
 
 	public static void onError(ErrorType type, String message) {

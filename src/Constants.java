@@ -11,6 +11,9 @@ public class Constants {
 	public static final int FIXTURE_UPDATE_FREQUENCY = 20;
 	public static final long FIXTURE_UPDATE_PERIOD_NANOS = (long) (1000 * 1000 * 1000 * ((double) 1 / (double) DMX_DATA_FREQUENCY));
 	
+	public static final int FADER_UPDATE_FREQUENCY = 20;
+	public static final long FADER_UPDATE_PERIOD_NANOS = (long) (1000 * 1000 * 1000 * ((double) 1 / (double) FADER_UPDATE_FREQUENCY));
+	
 	public static final int MAIN_LOOP_FREQUENCY = 100;
 	public static final long MAIN_LOOP_PERIOD_NANOS = (long) (1000 * 1000 * 1000 * ((double) 1 / (double) MAIN_LOOP_FREQUENCY));
 	

@@ -1,10 +1,7 @@
-public class FixtureManager extends Thread implements TwoWaySerialCommSubscriber{
+public class FixtureManager extends Thread{
 	
 	@Override
 	public void run() {
-		
-		Main.getDmxWriter().dmxComm.subscribe(this);
-		
 		while(!Thread.interrupted()) {
 			for(int i = 0; i < Constants.FIXTURE_COUNT; i++) {
 				long start = System.nanoTime();
@@ -26,13 +23,4 @@ public class FixtureManager extends Thread implements TwoWaySerialCommSubscriber
 			}
 		}
 	}
-	
-	@Override
-	public void onSerialData(String data) {
-		//TODO: Remove this debug code
-		String[] lel = data.substring(0, data.length() - 1).split(":");
-		Fixture fixture = Main.fixtures[Integer.parseInt(lel[0])];
-		fixture.setChannelValue(fixture.template.getDimOffset(), Integer.parseInt(lel[1]));
-	}
-	
 }
