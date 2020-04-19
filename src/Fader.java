@@ -18,12 +18,12 @@ public class Fader {
 	/**
 	 * List of values for each channel. {@link #value} is multiplied with this for each channel. Indexes are the same as {@link #fixtures}
 	 */
-	private int[] channelsForFixtures;
+	private int[] valuesForFixtures;
 	
 	/**
 	 * List of which channel to control for each fixture. Indexes are the same as {@link #fixtures}
 	 */
-	private int[] valuesForFixtures;
+	private int[] channelsForFixtures;
 	
 	public Fader(Fixture[] fixtures, int[] channelsForFixtures, int[] valuesForFixtures, int value) {
 		this.fixtures = fixtures;
