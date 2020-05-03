@@ -28,6 +28,7 @@ public class Fader {
 	public Fader(Fixture[] fixtures, int[] channelsForFixtures, int[] valuesForFixtures, int value) {
 		this.fixtures = fixtures;
 		this.channelsForFixtures = channelsForFixtures;
+		this.valuesForFixtures = valuesForFixtures.clone();
 		this.setValue(value);
 	}
 	
