@@ -2,7 +2,13 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/rxtx-2.1-7-bins-r2.zip"/>
 	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/ini4j-0.5.4-bin.zip"/>
+	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/ini4j-0.5.4/ini4j-0.5.4.jar"/>
+	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/ini4j-0.5.4/ini4j-0.5.4-jdk14.jar"/>
+	<classpathentry kind="lib" path="D:/DEV/JAVA/workspace/Light Mixer/resources"/>
+	<classpathentry kind="lib" path="D:/DEV/JAVA/External Libraries/json-simple-1.1.jar" sourcepath="C:/Users/egef/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
